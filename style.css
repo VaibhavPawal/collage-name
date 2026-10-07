@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* Orange utility bar */
+.top-bar {
+    background: #ed6d2f;
+    color: #fff;
+    height: 34px;
+}
+
+.utility-links {
+    height: 34px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+/* Header */
+.header {
+    background: #fff;
+    border-bottom: 3px solid #ed6d2f;
+}
+
+.header-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.logo {
+    display: block;
+    flex: 0 0 190px;
+    margin: 12px 0;
+}
+
+.logo img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation */
+.navbar {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 36px;
+    row-gap: 0;
+}
+
+.navbar a {
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    white-space: nowrap;
+    padding: 30px 0 16px;
+    display: inline-block;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ed6d2f;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #ed6d2f;
+}
+
+.navbar span {
+    font-size: 18px;
+}
+
+.navbar b {
+    background: #ef3d2e;
+    color: #fff;
+    padding: 4px 7px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* Main picture */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.hero > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.hero-caption {
+    position: absolute;
+    left: 7%;
+    bottom: 45px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 18px 25px;
+    border-left: 5px solid #ed6d2f;
+}
+
+.hero-caption h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.hero-caption p {
+    font-size: 17px;
+}
+
+/* Simple content */
+.welcome {
+    padding: 45px 0;
+    text-align: center;
+}
+
+.welcome h2 {
+    color: #ed6d2f;
+    margin-bottom: 12px;
+}
+
+.welcome p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar {
+        justify-content: center;
+        column-gap: 20px;
+        padding-bottom: 15px;
+    }
+
+    .navbar a {
+        padding: 12px 0;
+    }
+
+    .hero {
+        height: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        height: auto;
+        padding: 8px 0;
+    }
+
+    .utility-links {
+        justify-content: center;
+        font-size: 11px;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar a {
+        padding: 8px 0;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .hero-caption {
+        left: 5%;
+        right: 5%;
+        bottom: 20px;
+    }
+
+    .hero-caption h1 {
+        font-size: 22px;
+    }
+}
